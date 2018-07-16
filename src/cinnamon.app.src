@@ -5,7 +5,9 @@
   {mod, { cinnamon_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    sasl,
+    lager
    ]},
   {env,[]},
   {modules, []},
