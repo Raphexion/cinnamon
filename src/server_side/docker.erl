@@ -14,7 +14,7 @@ build(Folder, Name) ->
 run(Image, DockerCmd, MaxTime) ->
     Self = self(),
     F = fun() ->
-		Cmd = "docker run --rm " ++ Image ++ " " ++ DockerCmd,
+		Cmd = "docker run -d --rm " ++ Image ++ " " ++ DockerCmd,
 		case exec:exec(Cmd) of
 		    {0, Res} ->
 			Self ! {self(), Res};
